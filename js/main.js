@@ -1,26 +1,23 @@
-window.addEventListener("load", function(){
-	publicar.addEventListener("click", btnPublicar);
-	publicarTexto.addEventListener("click", publTexto);
-	publicarCita.addEventListener("click", publCita);
-	publicarMeme.addEventListener("click", publMeme);
-	publicarPastilla.addEventListener("click", publPastilla);
- });
+window.addEventListener("load",eventos);
 
-var publicar = document.getElementsByName("publicar")[0];
-var publicarTexto = document.getElementsByName("texto")[0];
-var publicarCita = document.getElementsByName("cita")[0];
-var publicarMeme = document.getElementsByName("meme")[0];
-var publicarPastilla = document.getElementsByName("pastilla")[0];
-var section = document.getElementsByTagName("section")[0];
+function eventos(){
+	array[0].addEventListener("click", btnPublicar);
+	array[1].addEventListener("click", publTexto);
+	array[2].addEventListener("click", publCita);
+	array[3].addEventListener("click", publMeme);
+	array[4].addEventListener("click", publPastilla);
+}
+
+var array = [document.getElementsByName("publicar")[0], document.getElementsByName("texto")[0],  document.getElementsByName("cita")[0], document.getElementsByName("meme")[0], document.getElementsByName("pastilla")[0], document.getElementsByTagName("section")[0]]
 
 function btnPublicar(){
 	var none = document.getElementsByTagName("div")[3];
 	none.style.display = "none";
 }
-
 // funcion para el evento de publicar texto
+
 function publTexto(){
-	publicar.value = "TEXTO";
+	array[0].value = "TEXTO";
 	var contenedorPorPublicar = contenedorPublicar();
 	var agregarContenedor = agregandoContenedor(contenedorPorPublicar);
 	var creandoTitulo = creandoInput(contenedorPorPublicar);
@@ -33,12 +30,10 @@ function publTexto(){
 		hora(con);
 	});
 }
-
-
 // funcion para el evento publicar cita
 
 function publCita(){
-	publicar.value = "CITA";
+	array[0].value = "CITA";
 	var nuevoContenedor = contenedorPublicar();
 	var agregarContenedor = agregandoContenedor(nuevoContenedor);
 	var creandotextArea =  creandoTextarea(nuevoContenedor);
@@ -50,12 +45,10 @@ function publCita(){
 		hora(pub);
 	});
 }
-
-
 // funcion para el eveneto publicar meme
 
 function publMeme(){
-	publicar.value = "MEME";
+	array[0].value = "MEME";
 	var nuevoContenedor = contenedorPublicar();
 	var agregarContenedor = agregandoContenedor(nuevoContenedor);
 	var input = creandoInput(nuevoContenedor);
@@ -69,7 +62,7 @@ function publMeme(){
 // funcion para el evento de publicar pastilla
 
 function publPastilla(){
-	publicar.value = "PASTILLAS";
+	array[0].value = "PASTILLAS";
 	var nuevoContenedor = contenedorPublicar();
 	// var contenedorPorPublicar = contenedorPublicar();
 	var agregarContenedor = agregandoContenedor(nuevoContenedor);
@@ -82,11 +75,8 @@ function publPastilla(){
 		hora(cont);
 	});
 }
-
-
-
-
 // empezando a crear las partes
+
 function contenedorPublicar(){
 	var contenedorPorPublicar = document.createElement("div");
 	contenedorPorPublicar.setAttribute("class", "contenedorPorPublicar");
@@ -94,7 +84,7 @@ function contenedorPublicar(){
 	return contenedorPorPublicar;
 }
 function agregandoContenedor(contenedor){
-	section.insertBefore(contenedor, section.children[1]);
+	array[5].insertBefore(contenedor, array[5].children[1]);
 	return contenedor;
 }
 function creandoTextarea(contenedor){
@@ -119,14 +109,14 @@ function insertarTitulo(valor, content){
 function creandoContenedorPublicados(valor){
 	var contenedorPublicado = document.createElement("div");
 	contenedorPublicado.setAttribute("class", "creandoContenedorPublicados");
-	section.insertBefore(contenedorPublicado, section.children[2]);
+	array[5].insertBefore(contenedorPublicado, array[5].children[2]);
 	creandoDivPublicacion(contenedorPublicado, valor);
 	return contenedorPublicado;
 }
 function ana(){
 	var contenedorPublicado = document.createElement("div");
 	contenedorPublicado.setAttribute("class", "creandoContenedorPublicados");
-	section.insertBefore(contenedorPublicado, section.children[2]);
+	array[5].insertBefore(contenedorPublicado, array[5].children[2]);
 	return contenedorPublicado;
 }
 function creandoDivPublicacion(contenedorpublicado, valor){
@@ -158,7 +148,6 @@ function creandoImagen(valor, content){
 function cambiarFondo(content){
 	var bobtonColor = document.createElement("input");
 	bobtonColor.setAttribute("type", "color");
-	// bobtonColor.innerText = "cambiar color de fondo";
 	content.appendChild(bobtonColor);
 	return bobtonColor;
 }
@@ -179,4 +168,3 @@ function hora(contenido){
 	contenido.appendChild(contHora);
 	return contHora;
 }
-// horaPublicar.getDate() + "/" + (horaPublicar.getMonth() + 1) + "/" + horaPublicar.getFullYear()
