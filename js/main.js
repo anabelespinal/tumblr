@@ -210,4 +210,4 @@ function hora(contenido){
 	contHora.appendChild(spanDos);
 	contenido.appendChild(contHora);
 	return contHora;
-}
+}   
