@@ -59,7 +59,7 @@ function publMeme(){
 	input.placeholder = "ESCRIBE EL LINK DEL MEME"
 	var creandoBoton = agregandoBoton(nuevoContenedor);
 	creandoBoton.addEventListener("click", function(){
-		var box = ana();
+		var box = contentImg();
 		var imagen = creandoImagen(input.value, box) ;
 		var hour = hora(box);
 		input.value = "";
@@ -70,7 +70,6 @@ function publMeme(){
 function publPastilla(){
 	array[0].value = "PASTILLAS";
 	var nuevoContenedor = contenedorPublicar();
-	// var contenedorPorPublicar = contenedorPublicar();
 	var agregarContenedor = agregandoContenedor(nuevoContenedor);
 	var creandotextArea =  creandoTextarea(nuevoContenedor);
 	var fondo = cambiarFondo(nuevoContenedor);
@@ -120,7 +119,7 @@ function creandoContenedorPublicados(valor){
 	creandoDivPublicacion(contenedorPublicado, valor);
 	return contenedorPublicado;
 }
-function ana(){
+function contentImg(){
 	var contenedorPublicado = document.createElement("div");
 	contenedorPublicado.setAttribute("class", "creandoContenedorPublicados");
 	array[5].insertBefore(contenedorPublicado, array[5].children[2]);
