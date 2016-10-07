@@ -26,8 +26,10 @@ function publTexto(){
 	var creandoBoton = agregandoBoton(contenedorPorPublicar);
 	creandoBoton.addEventListener("click", function(){
 		var con = creandoContenedorPublicados(creandotextArea.value);
-		insertarTitulo(creandoTitulo.value, con);
-		hora(con);
+		var title = insertarTitulo(creandoTitulo.value, con);
+		var hour = hora(con);
+		creandoTitulo.value = "";
+		creandotextArea.value = "";
 	});
 }
 // funcion para el evento publicar cita
@@ -42,7 +44,9 @@ function publCita(){
 	creandoBoton.addEventListener("click", function(){
 		var pub = creandoContenedorPublicados(creandotextArea.value);
 		var sp = crearSpan(input.value, pub);
-		hora(pub);
+		var hour = hora(pub);
+		input.value = "";
+		creandotextArea.value = "";
 	});
 }
 // funcion para el eveneto publicar meme
@@ -55,8 +59,10 @@ function publMeme(){
 	input.placeholder = "ESCRIBE EL LINK DEL MEME"
 	var creandoBoton = agregandoBoton(nuevoContenedor);
 	creandoBoton.addEventListener("click", function(){
-		var imagen = creandoImagen(input.value, ana());
-		hora(ana());
+		var box = ana();
+		var imagen = creandoImagen(input.value, box) ;
+		var hour = hora(box);
+		input.value = "";
 	});	
 }
 // funcion para el evento de publicar pastilla
@@ -72,7 +78,8 @@ function publPastilla(){
 	creandoBoton.addEventListener("click", function(){
 		var cont = creandoContenedorPublicados(creandotextArea.value);
 		var color = colorFondo(cont, fondo);
-		hora(cont);
+		var hour = hora(cont);
+		creandoTextArea.value = "";
 	});
 }
 // empezando a crear las partes
