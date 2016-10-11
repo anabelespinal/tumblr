@@ -4,7 +4,7 @@ var array = [document.getElementsByName("publicar")[0], document.getElementsByNa
 
 function eventos(){
 	array[1].addEventListener("click", TumblrTexto);
-	array[2].addEventListener("click", TumblCita);
+	array[2].addEventListener("click", TumblCita);   
 }
 
 function TumblrTexto() {//publTexto

@@ -185,7 +185,7 @@
 
 // function cambiarFondo(content){
 // 	var bobtonColor = document.createElement("input");
-// 	bobtonColor.setAttribute("type", "color");
+// 	bobtonColor.setAttribute("type", "color");   
 // 	content.appendChild(bobtonColor);
 // 	return bobtonColor;
 // }
