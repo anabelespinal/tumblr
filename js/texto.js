@@ -8,6 +8,7 @@ function publTexto(){
 	creandoTitulo.placeholder = "INSERTA EL TITULO DE TU TEXTO";
 	var creandotextArea =  constructorObject.creandoTextarea(contenedorPorPublicar);
 	var creandoBoton = constructorObject.agregandoBoton(contenedorPorPublicar);
+
 	creandoBoton.addEventListener("click", function(){
 		var con = constructorObject.creandoContenedorPublicados(creandotextArea.value);
 		var title = constructorObject.insertarTitulo(creandoTitulo.value, con);
