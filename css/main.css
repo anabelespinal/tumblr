@@ -27,10 +27,7 @@ body{
   background-color: #35465C;
 }
 
-h1, 
-h2, 
-h3,
-h4{
+h1, h2, h3, h4, .contenedorBtnPublicar, #dropdown1 li, .creandoContenedorPublicados{
   text-align: center;
 }
 
@@ -64,7 +61,6 @@ section {
 
 .contenedorBtnPublicar {
   margin-left: 2em;
-  text-align: center;
 }
 
 .contenedorBtnPublicar form input {
@@ -80,8 +76,6 @@ section {
 }
 
 #dropdown1 li {
-  display: inline-block;
-  text-align: center;
   list-style: none;
   padding: 1em;
   background-color: white;
@@ -109,22 +103,36 @@ section {
 
 /*creando clases fantasmas*/
 /*contenedor del textarea u otros*/
+.contenedorPorPublicar, .contenedorPorPublicar button, .contenedorPorPublicar input[type="color"], .creandoContenedorPublicados, .crearSpan{
+  position: relative;
+}
+
+.creandoContenedorPublicados div, .contenedorPorPublicar input, .contenedorPorPublicar button, .contenedorPorPublicar textarea{
+  font-family: cursive;
+}
+
+.creandoContenedorPublicados div, .crearSpan{
+  word-wrap: break-word;
+}
+
+.crearSpan, .contenedorPorPublicar, #dropdown1 li{
+  display: inline-block;
+}
 
 .contenedorPorPublicar {
   background-color: white;
-  display: inline-block;
   padding: 2em;
   width: 40%;
-  position: relative;
   margin-top: 3em;
   margin-left: 30%;
 }
+
 
 .contenedorPorPublicar textarea {
   height: 6em;
   border: none;
   border-bottom: 1px solid #59637B;
-  font-family: cursive;
+  resize: none;
 }
 
 .contenedorPorPublicar button {
@@ -132,20 +140,16 @@ section {
   background-color: #36465D;
   border: none;
   color: white;
-  font-family: cursive;
   margin-top: 1em;
-  position: relative;
   left: 70%;
 }
 
 .contenedorPorPublicar input {
   margin-top: 2em;
-  font-family: cursive;
 }
 
 .contenedorPorPublicar input[type="color"] {
   width: 5em;
-  position: relative;
   left: 2em;
   height: 2em;
   background-color: #36465D;
@@ -154,7 +158,6 @@ section {
 
 .creandoContenedorPublicados{
   background-color: white;
-  position: relative;
   left: 21%;
   padding: 2em;
   border: 2px solid #0D0B3C;
@@ -163,7 +166,6 @@ section {
   border-radius: 0.5em;
   width: 49%;
   margin-left: 5%;
-  text-align: center;
 }
 
 .creandoContenedorPublicados:hover{
@@ -178,8 +180,6 @@ section {
 }
 
 .creandoContenedorPublicados div {
-  word-wrap: break-word;
-  font-family: cursive;
   font-weight: bold;
   color: black; 
 }
@@ -193,11 +193,8 @@ section {
   width: 40%;
   margin-top: 1em;
   font-size: 120%;
-  display: inline-block;
-  position: relative;
   font-family: monospace;
   left: 30%;
-  word-wrap: break-word;
 }
 
 .contHora {

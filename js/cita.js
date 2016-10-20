@@ -2,15 +2,16 @@
 
 function publCita(){
 	array[0].value = "CITA";
-	var nuevoContenedor = contenedorPublicar();
-	var agregarContenedor = agregandoContenedor(nuevoContenedor);
-	var creandotextArea =  creandoTextarea(nuevoContenedor);
-	var creandoBoton = agregandoBoton(nuevoContenedor);
-	var input = creandoInput(nuevoContenedor);
+	var nuevoContenedor = constructorObject.contenedorPublicar();
+	var agregarContenedor = constructorObject.agregandoContenedor(nuevoContenedor);
+	var creandotextArea =  constructorObject.creandoTextarea(nuevoContenedor);
+	var creandoBoton = constructorObject.agregandoBoton(nuevoContenedor);
+	var input = constructorObject.creandoInput(nuevoContenedor);
+	input.placeholder ="ESCRIBE EL NOMBRE DEL AUTOR";
 	creandoBoton.addEventListener("click", function(){
-		var pub = creandoContenedorPublicados(creandotextArea.value);
-		var sp = crearSpan(input.value, pub);
-		var hour = hora(pub);
+		var pub = constructorObject.creandoContenedorPublicados(creandotextArea.value);
+		var sp = constructorObject.crearSpan(input.value, pub);
+		var hour = constructorObject.hora(pub);
 		input.value = "";
 		creandotextArea.value = "";
 	});
