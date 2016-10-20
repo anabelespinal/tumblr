@@ -59,8 +59,8 @@ section {
   padding-top: 3em;
 }
 
-.contenedorBtnPublicar {
-  margin-left: 2em;
+.contenedorBtnPublicar{
+  margin-top: 1%;
 }
 
 .contenedorBtnPublicar form input {
@@ -72,7 +72,8 @@ section {
 }
 
 #dropdown1{
-  background-color: transparent;
+  width: 100% !important;
+  margin-top: -1.7em;
 }
 
 #dropdown1 li {
@@ -102,6 +103,7 @@ section {
 }
 
 /*creando clases fantasmas*/
+
 /*contenedor del textarea u otros*/
 .contenedorPorPublicar, .contenedorPorPublicar button, .contenedorPorPublicar input[type="color"], .creandoContenedorPublicados, .crearSpan{
   position: relative;
@@ -122,9 +124,9 @@ section {
 .contenedorPorPublicar {
   background-color: white;
   padding: 2em;
-  width: 40%;
+  width: 50%;
   margin-top: 3em;
-  margin-left: 30%;
+  left: 25%;
 }
 
 
@@ -149,8 +151,6 @@ section {
 }
 
 .contenedorPorPublicar input[type="color"] {
-  width: 5em;
-  left: 2em;
   height: 2em;
   background-color: #36465D;
   border: none;
@@ -158,14 +158,13 @@ section {
 
 .creandoContenedorPublicados{
   background-color: white;
-  left: 21%;
   padding: 2em;
   border: 2px solid #0D0B3C;
   margin-bottom: 0.5em;
   margin-top: 3em;
   border-radius: 0.5em;
   width: 49%;
-  margin-left: 5%;
+  left: 25.4%;
 }
 
 .creandoContenedorPublicados:hover{
@@ -185,7 +184,7 @@ section {
 }
 
 .creandoContenedorPublicados img{
-  width: 75%;
+  width: 95%;
   border-radius: 0.5em;
 }
 
@@ -204,4 +203,32 @@ section {
 
 .contHora span{
   color: black;
+}
+
+@media(max-width: 740px){
+  .contenedorPorPublicar button{
+    left: 59%;
+  }
+}
+
+@media(max-width: 650px){
+  .creandoContenedorPublicados img{
+    height:15em;
+  }
+}
+
+@media(max-width: 540px){
+  .contenedorPorPublicar{
+    width: 80%;
+    left: 10%;
+  }
+  .creandoContenedorPublicados{
+    width: 90%;
+    left: 6%;
+  }
+}
+@media(max-width: 320px){
+  .contenedorPorPublicar button{
+    left: 30%;
+  }
 }

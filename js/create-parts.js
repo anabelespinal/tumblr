@@ -77,6 +77,7 @@ function Constructor(){
 												var img = document.createElement("img");
 												img.setAttribute("src", valor);
 												img.setAttribute("class","z-depth-3");
+												img.classList.add("responsive-img");
 												content.insertBefore(img, content.children[0]);
 												return img;
 											};
